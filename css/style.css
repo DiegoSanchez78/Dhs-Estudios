@@ -1,0 +1,501 @@
+@charset "UTF-8";
+@import url(../style.scss);
+body {
+  background-image: url("../Multimedia/fondo-ladrillo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Acme", sans-serif;
+  font-family: "Acme", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  text-shadow: 4px 5px 22px #3e3e3e;
+}
+
+/* tamaño de logos redes */
+.redes {
+  width: 30px;
+  height: 30px;
+}
+
+/* tamaño de logo whatsapp */
+.whatsapp {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+/* tamaño de mapa*/
+.mapa {
+  width: 261px;
+  height: 102px;
+}
+
+/* alineacion de footer*/
+.footer-estilo {
+  display: flex;
+  justify-content: center;
+  padding: 34px 0px;
+}
+
+/* logo mail separacion de texto*/
+.logo-mail {
+  padding: 25px 84px;
+}
+
+/* centrado de 3 logos de redes */
+.logo-redes {
+  display: flex;
+  justify-content: center;
+}
+
+/* ajuste de altura de seccion mapa*/
+.ubicacion {
+  margin: 32px 0px 10px;
+}
+
+@keyframes animacionlogo {
+  0% {
+    transform: rotate(90deg);
+  }
+  25% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* aliner mail */
+.mail {
+  text-align: center;
+}
+
+.logo-mail {
+  padding: 20px 0px;
+}
+
+.redes-margin {
+  margin: 0px 20px;
+}
+
+.fondo-footer-header {
+  background-color: #232323;
+}
+
+/* alineacion de header*/
+/* achicar tamaño de logo */
+/* ****************************ANIDAMIENTO************** HEADER IMG */
+header img {
+  width: 100px;
+  height: 100px;
+  margin: 0px 103px 0px 20px;
+}
+
+.borde-nav-responsive {
+  border-radius: 5px;
+}
+
+/* ajustar tamaño momentaneo para mejor visual del ejercicio de web*/
+.img-index {
+  width: 300px;
+  height: 300px;
+}
+
+/* grid en fotos de seccion equipamiento*/
+.grid-container {
+  margin: 40px 370px;
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  grid-gap: 20px;
+  grid-template-areas: "c1-f1 c2-f1" "c1-f2 c2-f2 ";
+  width: 45vw;
+}
+
+.area-grid-1 {
+  grid-area: c1-f1;
+}
+
+.area-grid-2 {
+  grid-area: c1-f2;
+}
+
+.area-grid-3 {
+  grid-area: c2-f1;
+}
+
+.area-grid-4 {
+  grid-area: c2-f2;
+}
+
+.fotos {
+  flex-wrap: wrap;
+}
+
+/* bordes de fotos*/
+/* efecto fotos de equipamiento*/
+.efectos-tex-equip:hover {
+  transition: all 1s;
+  transform: translateX(100px) scale(2);
+}
+
+/* bordes carrusel*/
+.carrusel-bordes {
+  border-radius: 43px;
+  border: 2px solid;
+}
+
+.texto {
+  font-size: 50px;
+}
+.texto .text-h1 {
+  font-size: 50px;
+}
+.texto .text-h2 {
+  font-size: 30px;
+}
+.texto .text-h3 {
+  font-size: 30px;
+}
+
+/* responsive hasta 768px*/
+@media only screen and (max-width: 768px) {
+  header img {
+    width: 70px;
+    height: 100px;
+    margin: 0px 103px 0px 20px;
+  }
+
+  header img, nav, .navega, header {
+    /* width: 95%; */
+    display: block;
+    padding: 16px 0px;
+    align-items: center;
+  }
+
+  .carrusel-tamaño {
+    margin: 0px 5px;
+  }
+
+  .alinear {
+    flex-wrap: wrap;
+  }
+
+  .footer-estilo {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 34px 0px;
+  }
+
+  h1, h2, h3 p {
+    text-align: center;
+  }
+
+  .grid-container {
+    margin: auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 20px;
+    grid-template-areas: "c1-f1 " "c1-f2 " "c1-f3 " "c1-f4 ";
+  }
+
+  .area-grid-1 {
+    grid-area: c1-f1;
+  }
+
+  .area-grid-2 {
+    grid-area: c1-f2;
+  }
+
+  .area-grid-3 {
+    grid-area: c1-f3;
+  }
+
+  .area-grid-4 {
+    grid-area: c1-f4;
+  }
+}
+/* responsive desde 769px hasta 960px*/
+@media only screen and (min-width: 769px) and (max-width: 960px) {
+  header {
+    padding: 16px 0px;
+  }
+
+  .ajustar-tamaño-videos {
+    width: auto;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 20px;
+    grid-template-areas: "c1-f1 " "c1-f2 " "c1-f3 " "c1-f4 ";
+  }
+
+  .area-grid-1 {
+    grid-area: c1-f1;
+  }
+
+  .area-grid-2 {
+    grid-area: c1-f2;
+  }
+
+  .area-grid-3 {
+    grid-area: c1-f3;
+  }
+
+  .area-grid-4 {
+    grid-area: c1-f4;
+  }
+}
+.anima-foto:hover {
+  transition: all 1s;
+  transform: scale(1.2);
+}
+
+.anima-logo:hover {
+  animation: animacionlogo 0.3s;
+  transition: all;
+}
+
+/* responsive desde 961px hasta 960px*/
+@media only screen and (min-width: 961px) and (max-width: 2540px) {
+  header {
+    padding: 16px 0px;
+  }
+
+  header {
+    width: 100%;
+  }
+  header img {
+    width: 10%;
+    height: 91%;
+  }
+
+  .carrusel-tamaño {
+    margin: 0% 30%;
+  }
+
+  .margin-nav {
+    margin: 0px 0px 0px 350px;
+  }
+}
+.algunos-equipos, .mp3-index, div > ul > div {
+  display: flex;
+  justify-content: center;
+}
+
+.hr-estilo {
+  border: 2px dashed #0c0c0c;
+}
+
+/* encabezado y ejempo de camelcase*/
+h1, h2, h3, section > p {
+  /* color: ghostwhite; */
+  -webkit-text-fill-color: #031f57;
+  /* -webkit-text-stroke: 0.5px #000000; */
+  text-align-last: center;
+}
+
+h4 {
+  /* color: ghostwhite; */
+  -webkit-text-fill-color: #ffffff;
+  /* -webkit-text-stroke: 0.5px #000000; */
+  text-align-last: center;
+  font-size: 19px;
+  /* tamaño h1*/
+}
+
+h1 {
+  font-size: 50px;
+  padding: 0px 0px 41px 0px;
+}
+
+h2, section > p {
+  font-size: 30px;
+  padding: 0px 0px 41px 0px;
+  font: bold;
+}
+
+h3 {
+  font-size: 20px;
+  padding: 0px 0px 41px 0px;
+  font: bold;
+}
+
+/* formato parrafos de equipamiento*/
+p {
+  color: #00544b;
+  letter-spacing: 1px;
+  font-size: larger;
+}
+
+/* formato redes e inicio */
+a {
+  color: #e27171;
+}
+
+/* formato equipamiento */
+.titulos {
+  color: #1e428a;
+  font-size: 30px;
+}
+
+.aclaracion-foto {
+  justify-content: space-around;
+}
+
+/* *************************************VARIABLE******************** */
+.alinear {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.ancho-parrafo {
+  margin: 4%;
+}
+
+/* formato texto de seccion equipamiento */
+/* *************************************EXTENSIONES******************** */
+div > ul > div {
+  align-items: center;
+}
+
+/* formato texto de seccion equipamiento*/
+.text-equip {
+  border: 2px solid #00544b;
+  border-radius: 5px;
+  margin: 7px;
+  padding: 2px 9px;
+}
+
+.section-1 {
+  padding: 46px 78px;
+}
+
+/* formato audio del index */
+.mp3-index {
+  padding: 0px 0px 80px;
+}
+
+/* formato de texto de seccion de audio del index */
+.mp3-texto-index {
+  display: flex;
+  align-items: center;
+  padding: 0px 49px;
+}
+
+/* formato en seccion algunos equipos index */
+.index-equip {
+  margin: 99px 0px;
+}
+
+/* formato en fotos seccion algunos equipos index */
+.algunos-equipos {
+  padding: 21px 0px;
+}
+
+/* formato en parrafo seccion nosotros*/
+.parrafo-nosotros {
+  padding: 0px 46px;
+  font-size: 20px;
+}
+
+/* formato en seccion deparrafo de seccion nosotros*/
+.section-nosotros {
+  padding: 0px 0px 100px;
+}
+
+/* formato nav en index*/
+.parrafo-index {
+  border: 2px solid gray;
+  border-radius: 20px;
+  text-align: center;
+  padding: 10px;
+}
+
+/* formato texto seccion equipamiento*/
+.equipamiento-texto {
+  padding: 80px 0px;
+}
+
+/* listas sin subrayado*/
+ul {
+  list-style: none;
+}
+
+/* centrado de videos*/
+.centrar-video {
+  text-align: center;
+}
+
+/* estilo seccion de audio trabajos*/
+.fondo-trabajos {
+  background: linear-gradient(174deg, antiquewhite, transparent);
+}
+
+/* fondo texto nosotros*/
+.nosotros {
+  border: 1px solid;
+  background: linear-gradient(106deg, antiquewhite, transparent);
+  border-radius: 54px;
+}
+
+div > ul > div, .mp3-index, .algunos-equipos {
+  display: flex;
+  justify-content: center;
+}
+
+/* ejemplo para seleccion de 2 colores de fondo , sin ejecucion por el momento*/
+.fondo-orange {
+  background-color: orange;
+}
+
+.fondo-white {
+  background-color: antiquewhite;
+}
+
+.texto {
+  font-size: 50px;
+}
+.texto .text-h1 {
+  font-size: 50px;
+}
+.texto .text-h2 {
+  font-size: 30px;
+}
+.texto .text-h3 {
+  font-size: 30px;
+}
+
+/* mixin fotos de seccion equipamiento*/
+/*parametros de fotos de seccion equipamiento*/
+.fotos-style {
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+/*condicion de h1 si cambia el color altera font size*/
+.h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.colores-p {
+  color: #00544b;
+}
+
+/*# sourceMappingURL=style.css.map */

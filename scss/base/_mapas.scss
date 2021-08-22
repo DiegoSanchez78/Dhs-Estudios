@@ -1,0 +1,17 @@
+
+/* ejemplo para seleccion de 2 colores de fondo , sin ejecucion por el momento*/
+$body-orange: (
+     bg-color-orange: orange,
+);
+
+$body-antique: (
+    bg-color-antique: antiquewhite,
+);
+
+.fondo-orange {
+    background-color: map-get($body-orange,bg-color-orange );  
+  }
+
+.fondo-white {
+  background-color: map-get($body-antique,bg-color-antique );  
+}

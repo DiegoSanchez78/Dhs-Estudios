@@ -1,0 +1,60 @@
+@import  '../base/variables';
+
+/* tamaño de logos redes */
+.redes {
+    width: 30px;
+    height: 30px;   
+}
+ /* tamaño de logo whatsapp */
+.whatsapp {
+    width: 50px;
+    height: 50px;  
+     position: fixed;
+    bottom: 0;
+    right: 0;
+   
+}
+ /* tamaño de mapa*/
+.mapa {
+    width: 261px;
+    height: 102px;
+}
+    /* alineacion de footer*/
+    .footer-estilo {
+        display: $align;
+        justify-content: center;  
+        padding: 34px 0px;
+       
+}
+/* logo mail separacion de texto*/
+.logo-mail  {
+    padding: 25px 84px;
+}
+/* centrado de 3 logos de redes */
+.logo-redes  {
+display: $align;
+justify-content: center;
+}
+/* ajuste de altura de seccion mapa*/
+.ubicacion{
+margin: 32px 0px 10px;
+} 
+
+@keyframes animacionlogo {
+    
+    0% {transform: rotate( 90deg);} 
+    25% {transform: rotate( 180deg)}
+    75% {transform: rotate( 270deg);}
+    100% {transform: rotate( 360deg); }
+}
+/* aliner mail */
+.mail {
+    text-align: center;
+    
+}
+.logo-mail {
+    padding: 20px 0px;
+}
+.redes-margin {
+    margin: 0px 20px;
+}

@@ -1,0 +1,29 @@
+
+/* mixin fotos de seccion equipamiento*/
+@mixin fotos-mixin($ancho, $alto, $borde, $radius) {
+    width: $ancho;
+    height: $alto;
+    border: $borde;
+    border-radius: $radius;
+
+}
+/*parametros de fotos de seccion equipamiento*/
+.fotos-style {
+    @include fotos-mixin(300px, 300px, 1px solid  white, 10px)
+}
+
+/*condicion de h1 si cambia el color altera font size*/
+@mixin condition ($color-h1){
+     color: $color-h1;
+
+    @if $color-h1 == rgb(3, 31, 87) {
+        font-size: 50px;
+    } @else {
+        font-size: 30px;
+    }
+}
+.h1 {
+    @include condition (white)
+
+}
+

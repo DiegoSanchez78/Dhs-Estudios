@@ -1,0 +1,130 @@
+@import  'variables';
+@import  '../base/operadores';
+
+/* responsive hasta 768px*/
+@media only screen  and (max-width: 768px) {
+    header img {
+        width: 70px;
+        height: 100px;
+        margin: 0px 103px 0px 20px
+    }
+    header img, nav, .navega, header{
+        /* width: 95%; */
+        display: block;
+        padding: 16px 0px; 
+        align-items: center;
+      
+    }
+    .carrusel-tamaño {
+        margin: 0px 5px;    
+    }
+    .alinear {
+        flex-wrap: wrap;
+    }
+    .footer-estilo {
+        flex-wrap: wrap;
+        display: flex;
+        padding: 34px 0px;
+    }
+    h1, h2,h3 p {
+        text-align: center;
+    }
+    
+
+    .grid-container {
+        margin: auto;
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 20px;
+       
+        grid-template-areas: 
+          "c1-f1 "
+          "c1-f2 "
+          "c1-f3 "
+          "c1-f4 ";         
+    }
+    
+    .area-grid-1 {
+        grid-area: c1-f1;
+    }
+    .area-grid-2 {
+        grid-area: c1-f2;
+    }
+    .area-grid-3 {
+        grid-area: c1-f3;
+    }
+    .area-grid-4 {
+        grid-area: c1-f4;
+    }
+    
+}
+
+/* responsive desde 769px hasta 960px*/
+@media only screen and (min-width: 769px) and (max-width: 960px) {
+    header {
+        padding: 16px 0px;
+    }
+    
+    .ajustar-tamaño-videos{
+        width:  auto;
+    }
+    .grid-container {
+        
+        display: grid;
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto auto;
+        grid-gap: 20px;
+        grid-template-areas: 
+          "c1-f1 "
+          "c1-f2 "
+          "c1-f3 "
+          "c1-f4 ";            
+    }
+    
+    .area-grid-1 {
+        grid-area: c1-f1;
+    }
+    .area-grid-2 {
+        grid-area: c1-f2;
+    }
+    .area-grid-3 {
+        grid-area: c1-f3;
+    }
+    .area-grid-4 {
+        grid-area: c1-f4;
+    }
+    
+}
+.anima-foto:hover {
+    transition: all 1s;
+    transform: scale(1.2);
+}
+.anima-logo:hover {
+    animation: animacionlogo 0.3s;
+    transition: all; 
+}
+
+/* responsive desde 961px hasta 960px*/
+@media only screen and (min-width: 961px) and (max-width: 2540px) {
+    header {
+        padding: 16px 0px;
+    }
+    header  {
+        width: $logo;
+       
+        img {
+            width: $logo - 90%;
+            height: $logo - 9%;
+        }
+       
+    }
+    
+    .carrusel-tamaño {
+        margin: 0% 30%;    
+    }
+    .margin-nav {
+        margin: 0px 0px 0px 350px;
+    }
+}

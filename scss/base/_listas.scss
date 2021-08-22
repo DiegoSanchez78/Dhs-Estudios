@@ -1,0 +1,9 @@
+$colores-texto: 
+rgb(3, 31, 87),
+#ffffff,
+#00544b,
+rgb(30, 66, 138);
+
+.colores-p  {
+    color: nth($colores-texto, 3 );
+}

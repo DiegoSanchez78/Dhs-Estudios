@@ -1,0 +1,19 @@
+$logo: 100%;
+$text: 50px;
+
+
+
+.texto {
+    font-size: $text;
+   
+    .text-h1 {
+        font-size: $text - 0px;
+    }
+    .text-h2 {
+        font-size: $text - 20px;
+    }
+    .text-h3 {
+        font-size: $text - 20px;
+    }
+   
+}
