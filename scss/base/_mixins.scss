@@ -8,9 +8,9 @@
 
 }
 /*parametros de fotos de seccion equipamiento*/
-.fotos-style {
-    @include fotos-mixin(300px, 300px, 1px solid  white, 10px)
-}
+// .fotos-style {
+//     @include fotos-mixin(300px, 300px, 1px solid  white, 10px)
+// }
 
 /*condicion de h1 si cambia el color altera font size*/
 @mixin condition ($color-h1){

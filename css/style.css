@@ -109,32 +109,6 @@ header img {
 }
 
 /* grid en fotos de seccion equipamiento*/
-.grid-container {
-  margin: 40px 370px;
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-template-rows: auto auto;
-  grid-gap: 20px;
-  grid-template-areas: "c1-f1 c2-f1" "c1-f2 c2-f2 ";
-  width: 45vw;
-}
-
-.area-grid-1 {
-  grid-area: c1-f1;
-}
-
-.area-grid-2 {
-  grid-area: c1-f2;
-}
-
-.area-grid-3 {
-  grid-area: c2-f1;
-}
-
-.area-grid-4 {
-  grid-area: c2-f2;
-}
-
 .fotos {
   flex-wrap: wrap;
 }
@@ -143,7 +117,7 @@ header img {
 /* efecto fotos de equipamiento*/
 .efectos-tex-equip:hover {
   transition: all 1s;
-  transform: translateX(100px) scale(2);
+  transform: translateX(100px) scale(1.2);
 }
 
 /* bordes carrusel*/
@@ -165,8 +139,16 @@ header img {
   font-size: 30px;
 }
 
-/* responsive hasta 768px*/
-@media only screen and (max-width: 768px) {
+/* mixin fotos de seccion equipamiento*/
+/*parametros de fotos de seccion equipamiento*/
+/*condicion de h1 si cambia el color altera font size*/
+.h1 {
+  color: white;
+  font-size: 30px;
+}
+
+/* responsive hasta 320px*/
+@media only screen and (max-width: 425px) {
   header img {
     width: 70px;
     height: 100px;
@@ -198,14 +180,20 @@ header img {
     text-align: center;
   }
 
+  .fotos-style {
+    width: 295px;
+    height: 200px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+
   .grid-container {
-    margin: auto;
     width: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 20px;
-    grid-template-areas: "c1-f1 " "c1-f2 " "c1-f3 " "c1-f4 ";
+    grid-template-areas: "c1-f1 " "c1-f2 " "c1-f3 " "c1-f4 " "c1-f5 " "c1-f6 " "c1-f7 " "c1-f8 " "c1-f9 ";
   }
 
   .area-grid-1 {
@@ -223,11 +211,129 @@ header img {
   .area-grid-4 {
     grid-area: c1-f4;
   }
+
+  .area-grid-5 {
+    grid-area: c1-f5;
+  }
+
+  .area-grid-6 {
+    grid-area: c1-f6;
+  }
+
+  .area-grid-7 {
+    grid-area: c1-f7;
+  }
+
+  .area-grid-8 {
+    grid-area: c1-f8;
+  }
+
+  .area-grid-9 {
+    grid-area: c1-f9;
+  }
 }
-/* responsive desde 769px hasta 960px*/
-@media only screen and (min-width: 769px) and (max-width: 960px) {
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+  header img {
+    width: 70px;
+    height: 100px;
+    margin: 0px 103px 0px 20px;
+  }
+
+  header img, nav, .navega, header {
+    /* width: 95%; */
+    display: block;
+    padding: 16px 0px;
+    align-items: center;
+  }
+
+  .carrusel-tamaño {
+    margin: 0px 5px;
+  }
+
+  .alinear {
+    flex-wrap: wrap;
+  }
+
+  .footer-estilo {
+    flex-wrap: wrap;
+    display: flex;
+    padding: 34px 0px;
+  }
+
+  h1, h2, h3 p {
+    text-align: center;
+  }
+
+  .fotos-style {
+    width: 240px;
+    height: 240px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+
+  .carrusel-fotos {
+    margin: auto;
+    width: 80%;
+    height: 60%;
+  }
+
+  .grid-container {
+    margin: auto;
+    margin: 0px 0px 0px 0px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    grid-template-areas: "c1-f1 c2-f1 c3-f1" "c1-f2 c2-f2 c3-f2" "c1-f3 c2-f3 c3-f3";
+  }
+
+  .area-grid-1 {
+    grid-area: c1-f1;
+  }
+
+  .area-grid-2 {
+    grid-area: c1-f2;
+  }
+
+  .area-grid-3 {
+    grid-area: c1-f3;
+  }
+
+  .area-grid-4 {
+    grid-area: c2-f1;
+  }
+
+  .area-grid-5 {
+    grid-area: c2-f2;
+  }
+
+  .area-grid-6 {
+    grid-area: c2-f3;
+  }
+
+  .area-grid-7 {
+    grid-area: c3-f1;
+  }
+
+  .area-grid-8 {
+    grid-area: c3-f2;
+  }
+
+  .area-grid-9 {
+    grid-area: c3-f3;
+  }
+}
+/* responsive desde 769px hasta 1024px*/
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
   header {
     padding: 16px 0px;
+  }
+
+  .carrusel-fotos {
+    margin: auto;
+    width: 60%;
+    height: 40%;
   }
 
   .ajustar-tamaño-videos {
@@ -236,10 +342,17 @@ header img {
 
   .grid-container {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
     grid-gap: 20px;
-    grid-template-areas: "c1-f1 " "c1-f2 " "c1-f3 " "c1-f4 ";
+    grid-template-areas: "c1-f1 c2-f1 c3-f1" "c1-f2 c2-f2 c3-f2" "c1-f3 c2-f3 c3-f3";
+  }
+
+  .fotos-style {
+    width: 325px;
+    height: 300px;
+    border: 1px solid white;
+    border-radius: 10px;
   }
 
   .area-grid-1 {
@@ -255,7 +368,104 @@ header img {
   }
 
   .area-grid-4 {
-    grid-area: c1-f4;
+    grid-area: c2-f1;
+  }
+
+  .area-grid-5 {
+    grid-area: c2-f2;
+  }
+
+  .area-grid-6 {
+    grid-area: c2-f3;
+  }
+
+  .area-grid-7 {
+    grid-area: c3-f1;
+  }
+
+  .area-grid-8 {
+    grid-area: c3-f2;
+  }
+
+  .area-grid-9 {
+    grid-area: c3-f3;
+  }
+}
+.anima-foto:hover {
+  transition: all 1s;
+  transform: scale(1.2);
+}
+
+.anima-logo:hover {
+  animation: animacionlogo 0.3s;
+  transition: all;
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 2560px) {
+  header {
+    padding: 16px 0px;
+  }
+
+  .carrusel-fotos {
+    margin: auto;
+    width: 50%;
+    height: 40%;
+  }
+
+  .ajustar-tamaño-videos {
+    width: auto;
+  }
+
+  .grid-container {
+    margin: 21px 83px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-gap: 20px;
+    grid-template-areas: "c1-f1 c2-f1 c3-f1" "c1-f2 c2-f2 c3-f2" "c1-f3 c2-f3 c3-f3";
+  }
+
+  .fotos-style {
+    width: 350px;
+    height: 350px;
+    border: 1px solid white;
+    border-radius: 10px;
+  }
+
+  .area-grid-1 {
+    grid-area: c1-f1;
+  }
+
+  .area-grid-2 {
+    grid-area: c1-f2;
+  }
+
+  .area-grid-3 {
+    grid-area: c1-f3;
+  }
+
+  .area-grid-4 {
+    grid-area: c2-f1;
+  }
+
+  .area-grid-5 {
+    grid-area: c2-f2;
+  }
+
+  .area-grid-6 {
+    grid-area: c2-f3;
+  }
+
+  .area-grid-7 {
+    grid-area: c3-f1;
+  }
+
+  .area-grid-8 {
+    grid-area: c3-f2;
+  }
+
+  .area-grid-9 {
+    grid-area: c3-f3;
   }
 }
 .anima-foto:hover {
@@ -269,27 +479,6 @@ header img {
 }
 
 /* responsive desde 961px hasta 960px*/
-@media only screen and (min-width: 961px) and (max-width: 2540px) {
-  header {
-    padding: 16px 0px;
-  }
-
-  header {
-    width: 100%;
-  }
-  header img {
-    width: 10%;
-    height: 91%;
-  }
-
-  .carrusel-tamaño {
-    margin: 0% 30%;
-  }
-
-  .margin-nav {
-    margin: 0px 0px 0px 350px;
-  }
-}
 .algunos-equipos, .mp3-index, div > ul > div {
   display: flex;
   justify-content: center;
@@ -481,13 +670,6 @@ div > ul > div, .mp3-index, .algunos-equipos {
 
 /* mixin fotos de seccion equipamiento*/
 /*parametros de fotos de seccion equipamiento*/
-.fotos-style {
-  width: 300px;
-  height: 300px;
-  border: 1px solid white;
-  border-radius: 10px;
-}
-
 /*condicion de h1 si cambia el color altera font size*/
 .h1 {
   color: white;
